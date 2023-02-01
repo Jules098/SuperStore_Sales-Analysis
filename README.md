@@ -40,10 +40,10 @@ Using an ARIMA model, I fit the model using the best parameters given the data a
 
 To create the Keras model, the original sales data needed to be organized by month and the optimal number of lags needed to be included in the dataframe. After fitting the model with 11 lags, the model had an adjusted R squared of 0.704. The data was scaled using the MinMax scaler available in sci-kit learn. Once the data was scaled and the training data was split from the testing data, I built the Keras Sequential Model and trained it on 100 epochs.
 
-The model achieved a MSE of 0.0062.
+The model achieved a RMSE of 26,552.19.
 
 I inversed the scaled training data and the scaled predicted output to be able to plot the last 6 months of predicted sales output for visualization purposes.
 
 <img width="579" alt="Keras Deeplearning Predicted Output" src="https://user-images.githubusercontent.com/110205528/216094233-3c3b3a25-74a4-49f6-8c73-2402e41949f6.png">
 
-We can see that the Keras deeplearning model was substantially better at predicting sales output than the originally tested ARIMA model.
+We can see that the Keras deeplearning model was less accurate at predicting sales output than the originally tested ARIMA model.  There may still be optimization methods to improve the RMSE of the Keras model.
